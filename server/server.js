@@ -6,7 +6,7 @@ require('dotenv').config({path:'./config/config.env'});
 const PORT=process.env.PORT;
 //DB connection
 const corsoptions={
-    origin:'http://localhost:3000',
+    origin:process.env.CLIENT_URL,
     credentials: true,
     optionsSuccessStatus:200
 }

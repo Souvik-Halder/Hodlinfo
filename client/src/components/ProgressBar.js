@@ -1,10 +1,7 @@
 import React from 'react'
-import {Flat, Heat, Nested} from '@alptugidin/react-circular-progress-bar'
+import {Flat} from '@alptugidin/react-circular-progress-bar'
 const ProgressBar = () => {
-    const options = {
-        size: 200,
-        background: "transparent"
-    };
+   
   return (
     <Flat  
     progress={50}

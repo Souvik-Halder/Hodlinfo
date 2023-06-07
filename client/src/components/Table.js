@@ -4,7 +4,7 @@ import { fetchData } from '../http';
 
 const Table = ({dark}) => {
     const [dataArray, setDataArray] = useState([]);
-    useEffect(async()=>{
+    useEffect(()=>{
       const extractData=async()=>{
         const {data}=await fetchData();
        
@@ -16,26 +16,26 @@ const Table = ({dark}) => {
   return (
     <div className='mt-11 '>
       
-<div class="relative overflow-x-auto shadow-md mx-2 mt-1">
-    <table class="w-full text-sm text-left  border-spacing-8 border-collapse">
-        <thead class="text-xs uppercase   text-[#7d7f85] cursor-pointer">
+<div className="relative overflow-x-auto shadow-md mx-2 mt-1">
+    <table className="w-full text-sm text-left  border-spacing-8 border-collapse">
+        <thead className="text-xs uppercase   text-[#7d7f85] cursor-pointer">
             <tr className='mt-6 '>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" className="px-6 py-3">
                    <span className="whitespace-nowrap"> #</span>
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" className="px-6 py-3">
                     <span className="whitespace-nowrap">Platform</span>
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" className="px-6 py-3">
                      <span className="whitespace-nowrap">Last Traded Price</span>
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" className="px-6 py-3">
                     <span className="whitespace-nowrap">Buy / Sell Price</span>
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" className="px-6 py-3">
                      <span className="whitespace-nowrap">Difference</span>
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" className="px-6 py-3">
                      <span className="whitespace-nowrap">Savings</span>
                 </th>
             </tr>

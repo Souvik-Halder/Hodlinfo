@@ -1,10 +1,9 @@
-import logo from './logo.svg';
 
 import Table from './components/Table';
 import Hero from './components/Hero';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 function App() {
   const [dark, setDark] = useState(true);
   const toogleMode=()=>{
