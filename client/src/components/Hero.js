@@ -1,6 +1,6 @@
 import React from "react";
 
-const Hero = () => {
+const Hero = ({dark}) => {
   return (
     <div>
       <div className="my-11 mx-8 px-8">
@@ -15,7 +15,7 @@ const Hero = () => {
           </div>
           <div className="flex flex-col text-center  ">
             <span className="text-[#63666e] text-[7px]  sm:text-[10px] md:text-[20px] lg:text-[40px] whitespace-nowrap">Best Price to Trade</span>
-             <span className="text-[#e4e5e6] text-[20px] md:text-[60px] lg:text-[80px] sm:text-[22px] font-[400] whitespace-nowrap">₹ 24,14,385</span>
+             <span className={`${dark?'text-[#e4e5e6]':'text-[#0c0f48]'} text-[20px] md:text-[60px] lg:text-[80px] sm:text-[22px] font-[400] whitespace-nowrap`}>₹ 24,14,385</span>
             <span className="text-[#63666e] lg:text-[20px] sm:text-[8px] xl:[20px] md:text-[10px] text-[7px]">Average BTC/INR net price including commission</span>
           </div>
           <div className="flex flex-col">

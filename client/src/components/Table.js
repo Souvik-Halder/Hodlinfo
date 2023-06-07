@@ -1,7 +1,18 @@
-import React from 'react'
+import React, { useEffect,useState } from 'react'
 import Row from './Row'
+import { fetchData } from '../http';
 
-const Table = () => {
+const Table = ({dark}) => {
+    const [dataArray, setDataArray] = useState([]);
+    useEffect(async()=>{
+      const extractData=async()=>{
+        const {data}=await fetchData();
+       
+        console.log(data);
+        setDataArray(data);
+      }
+      extractData();
+    },[])
   return (
     <div className='mt-11 '>
       
@@ -32,10 +43,14 @@ const Table = () => {
         <tbody className='text-[#fefefe] text-[22px] font-bold'>
           
            
-      
+      {
+        dataArray.map((data,index)=>{
+        return <Row key={index} name={data.name} last={data.last} buy={data.buy} sell={data.sell} 
+        base_unit={data.base_unit} dark={dark} volume={data.volume} index={index+1}/>
+            }
+        )
+      }
           
-          <Row/>
-          <Row/>
          
         </tbody>
     </table>
